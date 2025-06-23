@@ -1,0 +1,10 @@
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY pyproject.toml .
+RUN pip install .
+
+COPY src/kubereg/etl src/kubereg/etl
+
+CMD ["python", "-m", "kubereg.etl.etl"]

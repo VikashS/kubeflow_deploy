@@ -1,0 +1,12 @@
+docker build -t etl-image:latest -f docker/etl/Dockerfile .
+docker build -t train-image:latest -f docker/training/Dockerfile .
+docker build -t api-image:latest -f api/Dockerfile .
+
+
+
+docker tag etl-image:latest <your-registry>/etl-image:latest
+docker push <your-registry>/etl-image:latest
+add for training
+
+
+kfp run submit -f pipeline.yaml -e default -r my-run
