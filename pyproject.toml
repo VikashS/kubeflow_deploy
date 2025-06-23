@@ -1,0 +1,17 @@
+[project]
+name = "kubereg"
+version = "0.1.0"
+description = "Kubeflow pipeline for model training with ETL and FastAPI"
+dependencies = [
+    "kfp==2.7.0",
+    "kfp-kubernetes==1.2.0",
+    "pandas==2.2.2",
+    "scikit-learn==1.5.0",
+    "joblib==1.4.2",
+    "fastapi==0.112.2",
+    "uvicorn==0.30.6",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
